@@ -6,22 +6,18 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
     />
-    <title>Survivor</title>
+    <title>Army</title>
     <link rel="stylesheet" href="css/style.css" />
     <!-- Link to external CSS -->
   </head>
   <body>
     <header>
-      <h1>Survivor</h1>
+      <h1>Army</h1>
     </header>
 
     <main>
       <div id="status">
         <p>Press start to begin</p>
-      </div>
-      <div id="playing-info" class="hidden">
-        <p>Current Position: <span id="current-position"></span></p>
-        <p>Current Payout: <span id="current-payout"></span></p>
       </div>
 
       <div class="button-container">
@@ -32,37 +28,23 @@
       <!-- Input section -->
       <div class="input-section" id="input-section">
         <!-- Number input -->
-        <input
-          type="number"
-          id="user-input"
-          value="0.5"
-          min="0"
-          max="1"
-          text-align="center"
-        />
-        <label id="input-label" for="user-input">Success rate</label>
+        <input type="text" id="user-input" text-align="center" value="1" />
+        <label id="input-label" for="user-input">Number of attempts</label>
       </div>
 
       <div class="player-grid">
-        <div class="grid-header" id="player-header">Player:</div>
-        <div class="grid-header" id="kill-header">Kill:</div>
-        <div class="grid-header" id="pos-header">Pos.:</div>
-        <div class="grid-header">Payout:</div>
+        <div class="grid-header" id="rank-header">Rank:</div>
+        <div class="grid-header" id="qnt-header">Quantity:</div>
 
         <!-- 100 rows of data, placeholder cells -->
         <div class="grid-item">Player 1</div>
         <div class="grid-item">10</div>
-        <div class="grid-item">Position 1</div>
-        <div class="grid-item">$100</div>
 
         <!-- Repeat above rows as needed or dynamically insert data -->
       </div>
     </main>
-    <div id="popup" class="popup">
-      <p>Value copied</p>
-    </div>
     <footer>
-      <p>&copy; 2024 Pyatkosoft</p>
+      <p>&copy; 2025 Pyatkosoft</p>
     </footer>
 
     <script src="js/script.js"></script>
