@@ -6,8 +6,11 @@ function randBetween(min, max) {
 //Function to restore all defaults
 function readyToStartUpdate() {
   currentAvaliableRanks[20] = 1;
-  for (let i = 19; i > 0; i--) {
+  for (let i = 19; i > 6; i--) {
     currentAvaliableRanks[i] = currentAvaliableRanks[i + 1] * 3;
+  }
+  for (let i = 6; i > 0; i--) {
+    currentAvaliableRanks[i] = currentAvaliableRanks[i + 1] * 2;
   }
   for (let i = 1; i <= 20; i++) {
     currentResultedRanks[i] = { rank: ranks[i - 1], count: 0 };
@@ -117,10 +120,10 @@ function validateAndFormatInput(event) {
   if (
     !Number.isInteger(parsedValue) ||
     parsedValue < 1 ||
-    parsedValue > 1743392200
+    parsedValue > 203276182
   ) {
     input.value = ""; // Clear the input if it's invalid
-    alert("Please enter a valid integer between 1 and 1,743,392,200.");
+    alert("Please enter a valid integer between 1 and 203,276,182.");
     return;
   }
 
